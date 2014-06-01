@@ -62,7 +62,7 @@ namespace greg {
 				last_output = output_lower_limit;
 				return output_lower_limit;
 			}
-			integral += (error-last_error)/2.f;
+			integral += (error+last_error)/2.f;
 			last_error = error;
 		}
 		return last_output;
