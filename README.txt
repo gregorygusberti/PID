@@ -1,4 +1,4 @@
-This is a simple and easy PID controller writed in C++ to be used on any plataform! Including embedded microcontrollers!
+This is a simple and easy PID controller written in C++ to be used on any plataform! Including embedded microcontrollers!
 
 Please, if you use it, put some credits to:
 	Gregory Frizon Gusberti
