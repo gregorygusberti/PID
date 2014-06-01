@@ -56,9 +56,17 @@ namespace greg {
 			last_output = Kp*error + Ki*integral + Kd*(error-last_error);
 			if (last_output > output_upper_limit) {
 				last_output = output_upper_limit;
+				if (integral/error < 0.0) {
+					integral += (error+last_error)/2.f;
+					last_error = error;
+				}
 				return output_upper_limit;
 			}
 			if (last_output < output_lower_limit) {
+				if (integral/error < 0.0) {
+					integral += (error+last_error)/2.f;
+					last_error = error;
+				}
 				last_output = output_lower_limit;
 				return output_lower_limit;
 			}
