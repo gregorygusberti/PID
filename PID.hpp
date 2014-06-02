@@ -13,9 +13,11 @@ namespace greg {
         float output_lower_limit;
         float error;
 
-        PID();
-
+        
         public:
+            /// Public constructor
+            PID();
+
             /// Set the proportional term. Use it AFTER setRefreshInterval or setRefreshRate
             void setKp(const float &Kp);
 
