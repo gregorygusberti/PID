@@ -1,9 +1,12 @@
 #include "PID.hpp"
 
 namespace greg {
-    PID::PID() :
+    PID::PID(float kp, float ki, float kd) :
         last_error(0.f),
         last_output(0.f),
+        Kp(kp),
+        Ki(ki),
+        Kd(kd),
         integral(0.f),
         error_threshold(0.f)
         {}
