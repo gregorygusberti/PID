@@ -16,7 +16,7 @@ namespace greg {
         
         public:
             /// Public constructor
-            PID();
+            PID(float Kp=0.0f, float Ki=0.0f, float Kd=0.0);
 
             /// Set the proportional term. Use it AFTER setRefreshInterval or setRefreshRate
             void setKp(const float &Kp);
